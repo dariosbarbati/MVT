@@ -1,5 +1,5 @@
-from django.http import HttpResponse, httprResponse
+from django.http import HttpResponse
 from django.shortcuts import render
 
 def familia (resquest):
-    return render(resquest,"template.html", context={""})
+    return render(resquest,'template1.html', context={})
