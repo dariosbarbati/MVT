@@ -5,6 +5,6 @@ from django.db import models
 class   Persona(models.Model):
     name = models.CharField(max_length=40)
     last_name= models.CharField(max_length=40)
-    ages = models.IntegerField()
+    age= models.IntegerField()
     date = models.DateField(auto_now_add=True)
 
