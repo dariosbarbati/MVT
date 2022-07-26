@@ -9,14 +9,24 @@
 <body>
   <h1 style="text-decoration: underline ; text-align: center;"> Crear Familiar</h1>
   <br>
-  <h3 style="text-align: center;">Primero modificar la funcion create_person() en views.py para agrega un familiar nuevo</h3>
+  <!-- <h3 style="text-align: center;">Primero modificar la funcion create_person() en views.py para agrega un familiar nuevo</h3> -->
   <br>
   <br>
   <br>
   <br>
+
+  {% if new_person.name == "" or new_person.last_name == "" %}
+
+  <h1 style="color: red;text-align: center">Primero modificar la funcion create_person() en views.py para agrega un familiar nuevo y reiniciar servidor</h1>
+ 
+  {% else %}
+
   <h2>Nombre: {{new_person.name}}</h2>
   <h2>Apellido: {{new_person.last_name}}</h2>    
   <h2>Edad: {{new_person.ages}}</h2>  
   <h2>Vinculo: {{new_person.parent}}</h2>  
+
+  {% endif %}
+
 </body>
 </html>
