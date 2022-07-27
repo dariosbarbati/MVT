@@ -10,7 +10,7 @@ from personas.models import Persona
 
 def create_person(resquest):
 
-    new_person=Persona.objects.create(name="Dario", last_name="Sbarbati", parent="Padre", ages=34)
+    new_person=Persona.objects.create(name="", last_name="", parent="", ages=0)
     context={
         "new_person":new_person,
     }
