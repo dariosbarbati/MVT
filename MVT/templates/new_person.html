@@ -17,13 +17,15 @@
   <br>
   <br>
 
+  <!-- Si el nombre o apellido esta vacio le digo que lo modifique -->
+
   {% if new_person.name == "" or new_person.last_name == "" %}
 
   <h3 style="color: red;text-align: center">Primero modificar la funcion create_person() en views.py para agrega un familiar nuevo y reiniciar servidor</h3>
  <br>
  <br>
  <br>
-  <a  href="http://127.0.0.1:8000/bienvenido/" type="button" class="btn btn-primary">Volver</a>
+  
   {% else %}
 
   <h2>Nombre: {{new_person.name}}</h2>
@@ -32,6 +34,11 @@
   <h2>Vinculo: {{new_person.parent}}</h2>  
 
   {% endif %}
+  
+  <br>
+  <br>
+
+  <a  href="http://127.0.0.1:8000/bienvenido/" type="button" class="btn btn-primary">Volver</a>
 
 </body>
 </html>

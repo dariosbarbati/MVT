@@ -1,5 +1,7 @@
 from multiprocessing import context
 import re
+from shutil import register_unpack_format
+from unicodedata import name
 from django.shortcuts import render
 from personas.models import Persona
 
@@ -7,11 +9,14 @@ from personas.models import Persona
 # Antes de ir a http://127.0.0.1:8000/crear_persona/ modificar los siguientes parametros y reiniciar servidor
 
 def create_person(resquest):
-    new_person=Persona.objects.create(name="", last_name="", parent="", ages=0)
+
+    new_person=Persona.objects.create(name="Dario", last_name="Sbarbati", parent="Padre", ages=34)
     context={
         "new_person":new_person,
     }
-    return render(resquest, "new_person.html", context=context)
+
+    return render(resquest, "new_person.html", context=context) 
+
 
 def list_person(resquest):
     persons=Persona.objects.all()
