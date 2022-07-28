@@ -11,21 +11,32 @@
 </head>
 <body style="text-align: center">
     
-
+    <br>
+    <br> 
 
     <!-- Hago un for para recorrer el objeto con todos los familiares-->
+    <div class="container text-center">
+        <div class="row align-items-start">
 
     {% for person in persons %}
-    <h1 style= "color: rgb(96, 96, 168) ;">Nombre: {{person.name}}</h1>
-    <h1 style= "color: rgb(96, 96, 168) ;">Apellido: {{person.last_name}}</h1>
-    <h2>Edad: {{person.ages}}</h2>
-    <h2>Vinculo: {{person.parent}}</h2>
-    <h2>Fecha: {{person.date}}</h2>
+
+            <div class="col">
+    <!-- <h1 style= "color: rgb(96, 96, 168) ;">Nombre: {{person.name}}</h1>
+    <h1 style= "color: rgb(96, 96, 168) ;">Apellido: {{person.last_name}}</h1> -->
+
+    <h4 style= "color: rgb(96, 96, 168) ;">Nombre: {{person.name}}</h1>
+    <h4 style= "color: rgb(96, 96, 168) ;">Apellido: {{person.last_name}}</h1>
+    <h6>Edad: {{person.ages}}</h2>
+    <h6>Vinculo: {{person.parent}}</h2>
+    <h6>Fecha: {{person.date}}</h2>
 
     <br>
-    <br>
+    <br> 
+            </div>
 
     {% endfor %}
+        </div>
+    </div>
 
     <!-- Creo el boton para volver -->
     
